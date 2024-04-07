@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "drizzle-orm": "^0.30.7",
+    "pg": "^8.11.5"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.4",
+    "drizzle-kit": "^0.20.14",
+    "typescript": "^5.4.4"
+  }
+}

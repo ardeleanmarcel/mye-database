@@ -1,0 +1,10 @@
+services:
+  db:
+    image: mye-db-local
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    env_file: ./docker/.env
+    ports:
+      - 3033:5432
+    restart: always
