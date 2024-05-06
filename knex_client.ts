@@ -5,4 +5,8 @@ import { getCurrEnvName } from './constants.ts';
 const envName = getCurrEnvName();
 const knexConfig = postgresConfig[envName];
 
-export const knexClient = knex(knexConfig);
+const knexClient = knex(knexConfig);
+
+await knexClient.raw(`SET search_path TO ${envName};`);
+
+export { knexClient };

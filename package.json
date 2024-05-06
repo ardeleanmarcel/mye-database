@@ -6,6 +6,7 @@
   "scripts": {
     "compile": "tsc",
     "migrate:local": "tsx migrate.ts",
+    "migrate:down": "tsx migrate_down.ts",
     "make:migration": "tsx create_migration.ts"
   },
   "dependencies": {
