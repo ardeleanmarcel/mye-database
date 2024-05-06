@@ -4,9 +4,13 @@
     "node": "20.12.2"
   },
   "scripts": {
-    "compile": "tsc"
+    "compile": "tsc",
+    "migrate:local": "tsx migrate.ts",
+    "make:migration": "tsx create_migration.ts"
   },
   "dependencies": {
+    "dayjs": "^1.11.11",
+    "knex": "^3.1.0",
     "pg": "^8.11.5",
     "typescript": "^5.4.5"
   },
