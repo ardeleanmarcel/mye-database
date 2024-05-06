@@ -1,4 +1,4 @@
-import { Knex } from "knex";
+import { Knex } from 'knex';
 
 /**
  * @param { import("knex").Knex } knex
@@ -6,7 +6,11 @@ import { Knex } from "knex";
  */
 exports.up = function (knex: Knex) {
   return knex.raw(`
-
+    CREATE TABLE IF NOT EXISTS users (
+      user_id BIGINT GENERATED ALWAYS AS IDENTITY
+      username VARCHAR,
+      password VARCHAR
+    );
   `);
 };
 
@@ -16,6 +20,6 @@ exports.up = function (knex: Knex) {
  */
 exports.down = function (knex: Knex) {
   return knex.raw(`
-
+    DROP TABLE users;
   `);
 };

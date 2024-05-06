@@ -1,10 +1,10 @@
 // TODO (Valle) -> consolidate commands into single file?
-import dayjs from 'dayjs';
+import 'dotenv/config';
 
 import { knexClient } from './knex_client.ts';
 
-// TODO (Valle) -> assert received arg is a valid string
+const nameInput = process.argv[2];
 
-const name = dayjs().format('YYYY-MM-DD') + 'gigi';
+if (!nameInput) throw new Error('Migration name is missing!');
 
-await knexClient.migrate.make(name);
+await knexClient.migrate.make(nameInput);
