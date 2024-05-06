@@ -1,23 +1,19 @@
 {
   "type": "module",
   "engines": {
-    "node": "18.16.1"
+    "node": "20.12.2"
   },
   "scripts": {
-    "compile": "tsc",
-    "generate:pg": "drizzle-kit generate:pg",
-    "migrate": "tsx ./db/migrate.ts",
-    "drop": "drizzle-kit drop"
+    "compile": "tsc"
   },
   "dependencies": {
-    "drizzle-orm": "^0.30.7",
     "pg": "^8.11.5",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
     "@types/pg": "^8.11.4",
     "dotenv": "^16.4.5",
-    "drizzle-kit": "^0.20.14",
+    "eslint": "^9.2.0",
     "tsx": "^4.7.2"
   }
 }
