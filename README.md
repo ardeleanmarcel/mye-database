@@ -2,6 +2,12 @@
 
 ## TODO
 
+## Local Environment
+
+- Create `.env` file based on `.env.example`
+- Start the DB using `docker compose up`
+- Set the user's schema search by running `ALTER ROLE <user> SET search_path TO <schema name>`
+
 ## Convetions
 
 - Table names should have plural names i.e. "users", NOT "user"!
