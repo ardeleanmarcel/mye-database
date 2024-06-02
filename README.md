@@ -8,7 +8,7 @@
 - Start the DB using `docker compose up`
 - Set the user's schema search by running `ALTER ROLE <user> SET search_path TO <schema name>`
 
-## Convetions
+## Conventions
 
 - Table names should have plural names i.e. "users", NOT "user"!
 
