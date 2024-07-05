@@ -21,3 +21,6 @@
 - Use command `npm run make:migration -- <your_snake_case_name>`
 
 ## Running Migrations
+
+- Use command `npm run migrate:all` to run all migrations.
+- Use command `npm run migrate:down` to reverse last migration.
