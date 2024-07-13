@@ -7,4 +7,8 @@ const nameInput = process.argv[2];
 
 if (!nameInput) throw new Error('Migration name is missing!');
 
-await knexClient.migrate.make(nameInput);
+const res = await knexClient.migrate.make(nameInput);
+
+console.log('[MYE] Created migration file: ', res);
+
+process.exit();
