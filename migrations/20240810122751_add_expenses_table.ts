@@ -4,7 +4,7 @@ export const up = function (knex: Knex) {
   return knex.raw(`
     CREATE TABLE IF NOT EXISTS expenses (
       "expense_id"        BIGINT GENERATED ALWAYS AS IDENTITY UNIQUE,
-      "description"       VARCHAR   UNIQUE  NOT NULL,
+      "description"       VARCHAR           NOT NULL,
       "amount"            NUMERIC(12,2)     NOT NULL,
       "added_by_user_id"  BIGINT            NOT NULL
                           CONSTRAINT user_id_fk REFERENCES users (user_id),
